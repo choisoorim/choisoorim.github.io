@@ -9,14 +9,41 @@
 			for(var i = 0; i < 2; i++){
 				console.log(rev);
 			}
-		</script>
-		<script type="text/javascript">
 			for (name in document) {
             console.log(name);}
 		</script>
 	</head>
 	<body>
-		Hello World!
-	
+		Hello World!<br /><br />
+	<script type="text/javascript">
+		function intro (hi, name, come){
+			document.write(hi + '방문자님, ' + name + '의 홈페이지 ' + come + '을 환영합니다.<br />')
+		}
+		intro('안녕하세요 ', '최수림', '방문');
+
+		var myName = ['최수림 ', '22살 ', '사자자리<br />'];
+		for (var i =0; i<2; i++){
+			document.write(myName);
+		}
+		var school = {Kaywon: '계원예술대학교', ClassOf: '학번: 21561121</br>'};
+		var name = '';
+		var koreanName = [];
+		for (name in school) {
+		 koreanName.push(school[name]);
+		}
+		for (var i = 0; i<2; i++){
+			document.write(koreanName);
+		}
+
+		var count = 0;
+
+		while (count<10){
+			document.write('과제하기싫다 ' + count + '번째 느낌표!!<br />');
+			count++;
+		}
+		
+
+	</script>
+
 	</body>
 </html>
