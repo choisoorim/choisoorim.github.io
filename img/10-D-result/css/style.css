@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* RESET CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 실습 작성 */
+article.atc1 {text-align:center;}
+article.atc1 ul {width:1170px;display:inline-block;}
+article.atc1 ul li {float:left;width:25%;}
+article.atc1 ul li a {text-decoration:none;text-align:center;}
+article.atc1 ul li a h2 {font-size:22px;color:#555;margin-bottom:15px;}
+article.atc1 ul li a p {font-size:14px;line-height:24px;color:#8c8c8c;}
+article.atc1 ul li a span {display:block;margin:0 auto;text-indent:-9999px;}
+article.atc1 ul li a span.ic {
+	width:100px;height:100px;background:url('../img/common.png') no-repeat 0 0;
+}
+article.atc1 ul li a.box2 span.ic {background-position:-100px 0;}
+article.atc1 ul li a.box3 span.ic {background-position:-200px 0;}
+article.atc1 ul li a.box4 span.ic {background-position:-300px 0;}
+article.atc1 ul li a span.bar {
+	margin-top:20px;width:70px;height:3px;background-color:#f1eee9;
+}
+article.atc1 ul li a:hover h2 {color:#c7b299;}
+article.atc1 ul li a:hover span.bar {background-color:#c7b299;}
+
+article.atc1 ul li a.box1:hover span.ic {background-position:0 -100px;}
+article.atc1 ul li a.box2:hover span.ic {background-position:-100px -100px;}
+article.atc1 ul li a.box3:hover span.ic {background-position:-200px -100px;}
+article.atc1 ul li a.box4:hover span.ic {background-position:-300px -100px;}
+
+article.atc2 {clear:both;background-color:#fbfaf8;}
+article.atc2 div {
+	padding-left:500px;
+	width:670px;height:695px;margin:100px auto 0;
+	background:url('../img/phone.jpg') no-repeat 50px bottom;
+}
+article.atc2 div h2 {font-size:30px;padding-top:190px;}
+article.atc2 div p {font-size:16px;line-height:28px;padding-top:30px;}
+article.atc2 div ul {margin-top:30px;}
+article.atc2 div ul li {
+	margin-left:50px;
+	padding:2px 0 12px 50px;
+	min-height:21px;
+	line-height:21px;
+	background:url('../img/ic.png') no-repeat;
+}
+article.atc3 {
+	text-align:center;
+	height:300px;background:-webkit-linear-gradient(left, #211b19, #4e3427);
+}
+article.atc3 ul {margin-top:35px;width:1170px;display:inline-block;}
+article.atc3 ul li {float:left;width:20%;}
+article.atc3 ul li span {display:block;margin:0 auto;text-indent:-9999px;}
+article.atc3 ul li span.ic {
+	width:100px;height:100px;
+	background:url('../img/common.png') no-repeat 0 -200px;
+}
+article.atc3 ul li:nth-child(2) span.ic {background-position:-100px -200px;}
+article.atc3 ul li:nth-child(3) span.ic {background-position:-200px -200px;}
+article.atc3 ul li:nth-child(4) span.ic {background-position:-300px -200px;}
+article.atc3 ul li:nth-child(5) span.ic {background-position:-400px -200px;}
+article.atc3 ul li span.bar {
+	margin-top:30px;width:30px;height:2px;background-color:#FFF;
+}
+article.atc3 ul li h2 {font-size:48px;color:#FFF;}
+article.atc3 ul li p {font-size:14px;color:#c7b299;padding-top:10px;}
