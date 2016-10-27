@@ -48,22 +48,6 @@
             for(var i=0;i < imageNames.length;i++){
                 $('<li></li>').append('<img src='+'"'+imageNames[i]+'"'+'/>').appendTo('ul#sliderContainer');  
             }      
-            var $p = $('p#test');
-            var $er = $('p#error');
-            //Quest 05 p#moveTop노드를 body의 가장 위로 이동합시다 prepend, before
-            $('body').prepend($('p#moveTop'));
-            //Quest 06 p#moveBottom노드를 body의 가장 아래로 이동합 시다. append, after
-            $('body').after($('p#moveBottom'));
-            //Quest 07 p#error노드를 삭제합시다. remove
-            $er.remove();
-            
-            //Quest 08 p#test노드의 내용을 ‘수정되었습니다’ 로 수정해봅 시다. html, text
-            $p.text('저를수정해주세요');
-            //Quest 07 p#test노드의 내용을 모두 삭제합시다. html
-            $p.html('');
-            
-            
-            //week5
             var $li = $("#sliderContainer > li");
             $("#imageSlider").css('overflow','hidden');
             $li.css('float','left');
