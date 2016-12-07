@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>21561121-최수림</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<header>
+		<div class="dhd1">
+			<h1><a href="#"><img src="img/logo.png" width="181" height="56" alt=""></a></h1>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Features</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Shortcodes</a></li>
+					<li><a href="#">Contact</a></li>
+					<div>
+						<a href="#"><li class="h_1"></li></a>
+						<a href="#"><li class="h_2"></li></a>
+					</div>
+				</ul>
+			</nav>
+		</div>
+				<article class="hdart">
+		<div id="imageSlider" class="imageSlider">
+			<ul id="sliderContainer" class="sliderContainer">
+			</ul>
+			<div id="controller" class="controller">
+					<button id="leftButton" class="left">왼쪽으로</button>
+					<button id="rightButton" class="right">오른쪽으로</button>
+			</div>
+			<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+			<script type="text/javascript" src="js/jquery.js"></script>
+				<script type="text/javascript">
+   			 $(document).ready(function (){        
+			//자바스크립트 코드 작성 영역
+			var imageNames = ['img/img1.jpg', './img/img2.jpg', './img/img3.jpg', './img/img4.jpg', './img/img5.jpg'];
+
+            for(var i=0;i < imageNames.length;i++){
+                $('<li></li>').append('<img src='+'"'+imageNames[i]+'"'+'/>').appendTo('ul#sliderContainer');  
+            }      
+            var $li = $("#sliderContainer > li");
+            $("#imageSlider").css('overflow','hidden');
+            $li.css('float','left');
+            $("#sliderContainer img").css('height','592px');
+            
+            $("#sliderContainer").css('width',$li.length * parseInt($li.css('width')));
+            
+            $("#leftButton").html('move left').css({backgroundColor:'#ff6600',color:'#fff'});
+            $("#rightButton").html('move right').css({backgroundColor:'#ff8899',color:'#fff'});
+        
+            var max = $li.length;
+            var $container =$("#sliderContainer");
+            $container.css({'margin-left':'-800px'});
+            //li 1개의 영역만큼 앞으로 항상 2번째li를보이게함
+            $container.prepend($container.children()[max-1]);
+            //맨마지막자식노드를 맨앞으로(배열은 0부터시작)
+        
+            function moveLeft (){
+                  $($container.children()[1]).css({'margin-left':'800px'});
+                    //두번째자식li의 처음 위치값  
+                    $container.append($container.children()[0]);
+                    //첫번째li를 마지막노드로넣음
+                    $($container.children()[0]).animate({'margin-left':'0'},200);
+                    //두번째였던노드는 첫번째노드로 바뀌면서 배열[0]이되고 애니메이션실행
+                
+            }
+            function moveright (){
+                    $container.prepend($container.children()[max-1]);
+                    //마지막노드를 첫번째 노드로이동
+                    $($container.children()[0]).css({'margin-left':'-800px'});
+                    
+                    $($container.children()[0]).animate({'margin-left':'0'},200);
+           
+            }
+                         
+            $('#leftButton').click(moveLeft);
+            $('#rightButton').click(moveright);
+           
+});
+		</script>
+	</article>
+	</header>
+
+	<article class="art1">
+		<ul>
+			<li>
+				<a href="#" class="box">
+					<span class="ic">ic</span>
+					<h2>Web &amp; App Design</h2>
+					<p>Nam liber tempor cum soluta nobis<br />
+					eleifend option congue nihil imperdiet<br />
+					doming id quod mazim.</p>
+					<span class="bar">bar</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="box2">
+					<span class="ic">ic</span>
+					<h2>Development</h2>
+					<p>Lorem ipsum dolor sit amet, adipiscing<br />
+					elit, sed diam nonummy nibh euismod<br />
+					tincidunt ut laoreet.</p>
+					<span class="bar">bar</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="box3">
+					<span class="ic">ic</span>
+					<h2>Customization</h2>
+					<p>Nam liber tempor cum soluta nobis<br />
+					eleifend option congue nihil imperdiet<br />
+					doming id quod mazim.</p>
+					<span class="bar">bar</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="box4">
+					<span class="ic">ic</span>
+					<h2>Marketing</h2>
+					<p>Nam liber tempor cum soluta nobis<br />
+					eleifend option congue nihil imperdiet<br />
+					doming id quod mazim.</p>
+					<span class="bar">bar</span>
+				</a>
+			</li>
+		</ul>
+
+		<div class="div1">
+			<div>
+				<h2>Our Latest Projects.</h2>
+				<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam<br />
+				processus dynamicus, qui sequitur mutationem consuetudium.</p>
+			</div>
+			<ul class="waaa">
+				<li><a href="#">All</a></li>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Mobile App</a></li>
+				<li><a href="#">Illustration</a></li>
+				<li><a href="#">Photography</a></li>
+			</ul>
+			<ul class="gallery">
+				<li>
+					<div>
+						<a class="a1" href="#">
+						    <div class="img">
+						    	<div>
+								 	<ul>
+								 		<li><img src="img/imgicon.png" width="26" height="26" alt="iconsub"></li>
+								 		<li><img src="img/imgicon2.png" width="26" height="26" alt="iconsub"></li>
+								 	</ul>
+							    </div>
+						    </div>
+							<div class="content">
+								<div>
+									<span>arrow</span>
+								</div>
+								<div class="subContent">
+									<h2>Claritas Etiam Processus</h2>
+									<p>Photography Nature</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a class="a1" href="#">
+							<div class="img">
+								<div>
+								 	<ul>
+								 		<li><img src="img/imgicon.png" width="26" height="26" alt="iconsub"></li>
+								 		<li><img src="img/imgicon2.png" width="26" height="26" alt="iconsub"></li>
+								 	</ul>
+							    </div>
+						    </div>
+						    <div class="content">
+						    	<div>
+						    		<span>arrow</span>
+						    	</div>
+						    	<div class="subContent">
+									<h2>Quam Nutamus Farum</h2>
+									<p>Graphic Design, Mock-Up</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a class="a1" href="#">
+							<div class="img">
+								<div>
+								 	<ul>
+								 		<li><img src="img/imgicon.png" width="26" height="26" alt="iconsub"></li>
+								 		<li><img src="img/imgicon2.png" width="26" height="26" alt="iconsub"></li>
+								 	</ul>
+							    </div>
+						    </div>
+						    <div class="content">
+						    	<div>
+									<span>arrow</span>
+								</div>
+								<div class="subContent">
+									<h2>Usus Legentis Videntur</h2>
+									<p>Photography, Holiday</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a class="a1" href="#">
+							<div class="img">
+								<div>
+								 	<ul>
+								 		<li><img src="img/imgicon.png" width="26" height="26" alt="iconsub"></li>
+								 		<li><img src="img/imgicon2.png" width="26" height="26" alt="iconsub"></li>
+								 	</ul>
+							    </div>
+						    </div>
+						    <div class="content">
+								<div>
+									<span>arrow</span>
+								</div>
+								<div class="subContent">
+									<h2>Claritas Etiam Processus</h2>
+									<p>Photography, Nature</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a class="a1" href="#">
+							<div class="img">
+								<div>
+								 	<ul>
+								 		<li><img src="img/imgicon.png" width="26" height="26" alt="iconsub"></li>
+								 		<li><img src="img/imgicon2.png" width="26" height="26" alt="iconsub"></li>
+								 	</ul>
+							    </div>
+							</div>
+							<div class="content">
+							   	<div>
+							   		<span>arrow</span>
+								</div>
+								<div class="subContent">
+									<h2>Quam Nutamus Farum</h2>
+									<p>Graphic Design, Mock-Up</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a class="a1" href="#">
+							<div class="img">
+								<div>
+								 	<ul>
+								 		<li><img src="img/imgicon.png" width="26" height="26" alt="iconsub"></li>
+								 		<li><img src="img/imgicon2.png" width="26" height="26" alt="iconsub"></li>
+								 	</ul>
+							    </div>
+							</div>
+							<div class="content">
+								<div>
+									<span>arrow</span>
+								</div>
+								<div class="subContent">
+									<h2>Usus Legentis Videntur</h2>
+									<p>Photography, Holiday</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="div1_1">
+			<a href="#">LOAD MORE</a>
+		</div>
+	</article>
+	<article class="art2">
+		<div>
+			<h2>Excellent for Mobile Devices.</h2>
+			<p>Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis<br />
+				nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores<br />
+				legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis<br />
+				videntur parum clari, fiant sollemnes in futurum.</p>
+			<ul>
+				<li>Nam liber tempor cum soluta nobis eleifend option;</li>
+				<li>Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
+				<li>Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
+				<li>Investigationes demonstraverunt lectores</li>
+			</ul>
+		</div>
+	</article>
+	<article class="art4">
+		<ul>
+			<li>
+				<span class="ic">ic</span>
+				<h2>3587</h2>
+				<p>Satisfied Clients</p>
+				<span class="bar">bar</span>
+			</li>
+			<li>
+				<span class="ic">ic</span>
+				<h2>207</h2>
+				<p>Cups of coffee</p>
+				<span class="bar">bar</span>
+			</li>
+			<li>
+				<span class="ic">ic</span>
+				<h2>2500</h2>
+				<p>Blog posts</p>
+				<span class="bar">bar</span>
+			</li>
+			<li>
+				<span class="ic">ic</span>
+				<h2>873</h2>
+				<p>Likes</p>
+				<span class="bar">bar</span>
+			</li>
+			<li>
+				<span class="ic">ic</span>
+				<h2>900</h2>
+				<p>We launched</p>
+				<span class="bar">bar</span>
+			</li>
+		</ul>
+	</article>
+	<footer>
+		<div class="fdiv">
+			<ul>
+				<li>Copyright © 2015 <div>Waxom</div></li>
+				<li><span>var</span></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><span>var</span></li>
+				<li><a href="#">FAQ</a></li>
+				<li><span>var</span></li>
+				<li><a href="#">Support</a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>
